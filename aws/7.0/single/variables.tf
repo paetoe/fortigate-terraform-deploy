@@ -12,22 +12,22 @@ variable "az1" {
 }
 
 variable "vpccidr" {
-  default = "10.1.0.0/16"
+  default = "10.0.0.0/16"
 }
 
 variable "publiccidraz1" {
-  default = "10.1.0.0/24"
+  default = "10.0.0.0/24"
 }
 
 variable "privatecidraz1" {
-  default = "10.1.1.0/24"
+  default = "10.0.1.0/24"
 }
 
 
 // License Type to create FortiGate-VM
 // Provide the license type for FortiGate-VM Instances, either byol or payg.
 variable "license_type" {
-  default     = "byol"
+  default     = "payg"
 }
 
 // AMIs are for FGTVM-AWS(PAYG) - 7.0.5
@@ -89,12 +89,12 @@ variable "fgtvmbyolami" {
 }
 
 variable "size" {
-  default = "c5n.xlarge"
+  default = "t2.small"
 }
 
 //  Existing SSH Key on the AWS 
 variable "keyname" {
-  default = "<AWS SSH KEY>"
+  default = "terraform-eu-west1"
 }
 
 variable "adminsport" {
